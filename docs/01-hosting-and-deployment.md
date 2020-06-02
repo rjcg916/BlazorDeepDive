@@ -66,6 +66,10 @@ Startup
 								                                MapControllers
 								                                MapFallbackToFile
 
+
+https://executecommands.com/blazor-server-application-project-structure/ 
+ 
+
 ## Client Side / Wasm
 
 https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-3.1#blazor-webassembly 
@@ -92,8 +96,14 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/webassembly?view=aspnetcore-3.1#azure-storage 
 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website-how-to?tabs=azure-portal
 
+https://microsoft.github.io/AzureTipsAndTricks/blog/tip221.html 
+
+https://timheuer.com/blog/deploy-blazor-app-to-azure-using-github-actions
+
 ## Server Side 
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/server?view=aspnetcore-3.1
+
+https://docs.microsoft.com/en-us/azure/azure-signalr/ 
 
 ## Server Hosting
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/webassembly?view=aspnetcore-3.1#hosted-deployment-with-aspnet-core
