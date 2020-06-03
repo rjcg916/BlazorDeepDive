@@ -1,0 +1,38 @@
+﻿@page "/error"
+@using Microsoft.Extensions.Logging
+@inject ILogger<Index> _logger
+
+<h1>Error</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+
+        _logger.LogInformation($"Preparing to Increment.");
+
+        try
+        {
+            currentCount++;
+
+            if (currentCount > 5)
+            {
+                currentCount = currentCount / 0;
+            }
+        }
+        catch (Exception e)
+        {
+            _logger.LogError($"Error incrementing: details {e.Message}");
+        }
+        finally {
+            _logger.LogInformation($"Completed Increment.");
+        }
+
+
+    }
+}

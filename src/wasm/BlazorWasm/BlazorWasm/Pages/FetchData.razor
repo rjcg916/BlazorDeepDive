@@ -1,5 +1,7 @@
+
 @page "/fetchdata"
 @inject HttpClient Http
+@inject Microsoft.Extensions.Logging.ILogger<Index> logger
 
 <h1>Weather forecast</h1>
 
@@ -39,7 +41,16 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        //logger.LogTrace("Trace: Forecast");
+        //logger.LogDebug("Debug: Forecast");
+        //logger.LogWarning("Warning: Forecast");
+        //logger.LogError("Error: Forecast");
+        //logger.LogCritical("Critical: Forecast");
+        //logger.LogError(new Exception("Oh my, exception"), "Error: Forecast");
+        //logger.LogInformation(forecasts.ToString());
+        //logger.LogInformation(forecasts[0].ToString());
     }
 
     public class WeatherForecast

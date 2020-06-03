@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Blazor.Extensions.Logging;
 
 namespace BlazorWasm
 {
@@ -23,7 +24,15 @@ namespace BlazorWasm
             //builder.Configuration
           
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
             //builder.Services.AddLogging
+            // Add Blazor.Extensions.Logging.BrowserConsoleLogger
+
+            //builder.Services.AddLogging(builder => builder
+            //        .AddBrowserConsole()
+            //        .SetMinimumLevel(LogLevel.Trace)
+            //);
+
             //builder.Services.AddAuthorizationCore
             //builder.Services.AddOptions
 
