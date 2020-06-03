@@ -7,27 +7,17 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Blazor.Extensions.Logging;
 
-namespace BlazorWasm
+namespace BlazorSignalR.Client
 {
     public class Program
     {
         public static async Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
-
-           
             builder.RootComponents.Add<App>("app");
-            //builder.HostEnvironment
-            //builder.Logging
-            //builder.Configuration
-          
-            builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-          
-            //builder.Services.AddAuthorizationCore
-            //builder.Services.AddOptions
+            builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             await builder.Build().RunAsync();
         }
