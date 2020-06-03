@@ -15,9 +15,17 @@ namespace BlazorWasm
         public static async Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
-            builder.RootComponents.Add<App>("app");
 
+           
+            builder.RootComponents.Add<App>("app");
+            //builder.HostEnvironment
+            //builder.Logging
+            //builder.Configuration
+          
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            //builder.Services.AddLogging
+            //builder.Services.AddAuthorizationCore
+            //builder.Services.AddOptions
 
             await builder.Build().RunAsync();
         }
