@@ -22,7 +22,7 @@ namespace BlazorHosted.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton(Configuration.GetSection("ClientAppSettings").Get<ClientAppSettings>());
+          //  services.AddSingleton(Configuration.GetSection("ClientAppSettings").Get<ClientAppSettings>());
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
