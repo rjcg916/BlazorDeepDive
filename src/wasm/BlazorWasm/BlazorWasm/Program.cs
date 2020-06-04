@@ -24,8 +24,9 @@ namespace BlazorWasm
             //builder.Configuration
           
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddTransient(sp => new WeatherClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-          
+
             //builder.Services.AddAuthorizationCore
             //builder.Services.AddOptions
 
